@@ -1,6 +1,7 @@
 export const useAuth = () => {
   // create user and store info
   const user = useState('user', () => null)
+  const router = useRouter()
   const { supabase } = useSupabase()
 
   supabase.auth.onAuthStateChange((e, session) => {
@@ -31,6 +32,7 @@ export const useAuth = () => {
     const { error } = await supabase.auth.signOut()
 
     if (error) throw error
+    router.push('/')
   }
 
   const isLoggedIn = () => {
