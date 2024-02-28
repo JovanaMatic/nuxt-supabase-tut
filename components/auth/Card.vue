@@ -41,7 +41,7 @@
         <input placeholder="Password" v-model="password"/>
       </div>
       <UButton @click="handleSubmit">Submit</UButton>
-      <p @click="handleLoginState">{{ isLoggedIn === 'login' ? 'Don\'t have an account? Create one now.' : 'Already have an account? Go ahead and log in' }}</p>
+      <p @click="handleLoginState">{{ isLoggedIn === 'login' ? 'Already have an account? Go ahead and log in' : 'Don\'t have an account? Create one now.' }}</p>
       </div>
       <div v-else>
         <h3>Check email form confirmation message</h3>
