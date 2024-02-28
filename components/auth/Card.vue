@@ -1,7 +1,7 @@
 <script setup lang="ts">
   const isLoggedIn = ref<'login' | 'signup'>('signup')
-  const email = ref(null)
-  const password = ref(null)
+  const email = ref('')
+  const password = ref('')
   const showConfirmEmailMessage = ref(false)
 
   const { signUp, signIn, user, signOut } = useAuth()

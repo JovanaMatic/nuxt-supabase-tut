@@ -15,7 +15,6 @@ export const useAuth = () => {
     })
 
     if (error) throw error
-    console.log(data.user)
     return data.user
   }
 
@@ -34,10 +33,15 @@ export const useAuth = () => {
     if (error) throw error
   }
 
+  const isLoggedIn = () => {
+    return !!user.value
+  }
+
   return {
     user,
     signUp,
     signIn,
-    signOut
+    signOut,
+    isLoggedIn
   }
 }
