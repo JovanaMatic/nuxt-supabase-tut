@@ -6,7 +6,6 @@ export const useAuth = () => {
 
   supabase.auth.onAuthStateChange((e, session) => {
     user.value = session?.user || null
-    console.log(e, session)
   })
 
   const signUp = async ({ email, password }) => {

@@ -56,7 +56,7 @@
 
 <style scoped>
   .card {
-    padding: rem
+    padding: 2rem
   }
 
   .card h3 {
